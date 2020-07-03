@@ -1,0 +1,10 @@
+D:\Projekty C#\Slowka\Slowka\bin\Debug\Slowka.exe.config
+D:\Projekty C#\Slowka\Slowka\bin\Debug\Slowka.exe
+D:\Projekty C#\Slowka\Slowka\bin\Debug\Slowka.pdb
+D:\Projekty C#\Slowka\Slowka\obj\Debug\Slowka.csprojAssemblyReference.cache
+D:\Projekty C#\Slowka\Slowka\obj\Debug\Slowka.Properties.Resources.resources
+D:\Projekty C#\Slowka\Slowka\obj\Debug\Slowka.csproj.GenerateResource.cache
+D:\Projekty C#\Slowka\Slowka\obj\Debug\Slowka.csproj.CoreCompileInputs.cache
+D:\Projekty C#\Slowka\Slowka\obj\Debug\Slowka.exe
+D:\Projekty C#\Slowka\Slowka\obj\Debug\Slowka.pdb
+D:\Projekty C#\Slowka\Slowka\obj\Debug\Slowka.DodajSlowko.resources
