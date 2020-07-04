@@ -36,6 +36,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnWstecz = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -118,11 +119,22 @@
             this.label4.Text = "Dodaj nowe słówko";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // btnWstecz
+            // 
+            this.btnWstecz.Location = new System.Drawing.Point(240, 299);
+            this.btnWstecz.Name = "btnWstecz";
+            this.btnWstecz.Size = new System.Drawing.Size(75, 23);
+            this.btnWstecz.TabIndex = 9;
+            this.btnWstecz.Text = "Wstecz";
+            this.btnWstecz.UseVisualStyleBackColor = true;
+            this.btnWstecz.Click += new System.EventHandler(this.btnWstecz_Click);
+            // 
             // DodajSlowko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 474);
+            this.Controls.Add(this.btnWstecz);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
@@ -132,7 +144,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DodajSlowko";
             this.Text = "Slowka";
             this.ResumeLayout(false);
@@ -150,6 +161,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnWstecz;
     }
 }
 

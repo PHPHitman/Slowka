@@ -8,3 +8,15 @@ D:\Projekty C#\Slowka\Slowka\obj\Debug\Slowka.csproj.CoreCompileInputs.cache
 D:\Projekty C#\Slowka\Slowka\obj\Debug\Slowka.exe
 D:\Projekty C#\Slowka\Slowka\obj\Debug\Slowka.pdb
 D:\Projekty C#\Slowka\Slowka\obj\Debug\Slowka.DodajSlowko.resources
+C:\Users\ACR\ProjektSlowka\Slowka\bin\Debug\Slowka.exe.config
+C:\Users\ACR\ProjektSlowka\Slowka\bin\Debug\Slowka.exe
+C:\Users\ACR\ProjektSlowka\Slowka\bin\Debug\Slowka.pdb
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.csprojAssemblyReference.cache
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.DodajSlowko.resources
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.Kategoria.resources
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.Properties.Resources.resources
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.csproj.GenerateResource.cache
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.csproj.CoreCompileInputs.cache
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.exe
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.pdb
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.MenuGlowne.resources
