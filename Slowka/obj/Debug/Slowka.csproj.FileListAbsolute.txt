@@ -12,11 +12,11 @@ C:\Users\ACR\ProjektSlowka\Slowka\bin\Debug\Slowka.exe.config
 C:\Users\ACR\ProjektSlowka\Slowka\bin\Debug\Slowka.exe
 C:\Users\ACR\ProjektSlowka\Slowka\bin\Debug\Slowka.pdb
 C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.csprojAssemblyReference.cache
-C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.DodajSlowko.resources
-C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.Kategoria.resources
 C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.Properties.Resources.resources
 C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.csproj.GenerateResource.cache
 C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.csproj.CoreCompileInputs.cache
 C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.exe
 C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.pdb
-C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.MenuGlowne.resources
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.AddNewWord.resources
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.Category.resources
+C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.MainMenu.resources

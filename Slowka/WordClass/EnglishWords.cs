@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Slowka.SlowkaKlasy
 {
-    class slowkaClass
+    class EnglishWords
     {
         //Getter Setter
         public int SlowkoID  { get; set; }
@@ -46,7 +46,7 @@ namespace Slowka.SlowkaKlasy
             return dt;
         }
 
-        public bool Insert (slowkaClass s)
+        public bool Insert (EnglishWords s)
         {
             bool isSuccess = false;
 

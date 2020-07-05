@@ -1,6 +1,6 @@
 ﻿namespace Slowka
 {
-    partial class MenuGlowne
+    partial class MainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,7 @@
             this.label1.Location = new System.Drawing.Point(369, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 11;
             this.label1.Text = "Menu główne";
             // 
             // progressBtn
@@ -48,10 +48,9 @@
             this.progressBtn.Location = new System.Drawing.Point(270, 302);
             this.progressBtn.Name = "progressBtn";
             this.progressBtn.Size = new System.Drawing.Size(261, 50);
-            this.progressBtn.TabIndex = 6;
+            this.progressBtn.TabIndex = 10;
             this.progressBtn.Text = "Postęp";
             this.progressBtn.UseVisualStyleBackColor = true;
-            this.progressBtn.Click += new System.EventHandler(this.progressBtn_Click);
             // 
             // addWordsBtn
             // 
@@ -59,7 +58,7 @@
             this.addWordsBtn.Location = new System.Drawing.Point(270, 238);
             this.addWordsBtn.Name = "addWordsBtn";
             this.addWordsBtn.Size = new System.Drawing.Size(261, 50);
-            this.addWordsBtn.TabIndex = 5;
+            this.addWordsBtn.TabIndex = 9;
             this.addWordsBtn.Text = "Dodaj słówko";
             this.addWordsBtn.UseVisualStyleBackColor = true;
             this.addWordsBtn.Click += new System.EventHandler(this.addWordsBtn_Click);
@@ -69,12 +68,12 @@
             this.LearnModeBtn.Location = new System.Drawing.Point(270, 173);
             this.LearnModeBtn.Name = "LearnModeBtn";
             this.LearnModeBtn.Size = new System.Drawing.Size(261, 50);
-            this.LearnModeBtn.TabIndex = 4;
+            this.LearnModeBtn.TabIndex = 8;
             this.LearnModeBtn.Text = "Tryb nauki";
             this.LearnModeBtn.UseVisualStyleBackColor = true;
             this.LearnModeBtn.Click += new System.EventHandler(this.LearnModeBtn_Click);
             // 
-            // MenuGlowne
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,8 +82,8 @@
             this.Controls.Add(this.progressBtn);
             this.Controls.Add(this.addWordsBtn);
             this.Controls.Add(this.LearnModeBtn);
-            this.Name = "MenuGlowne";
-            this.Text = "MenuGlowne";
+            this.Name = "MainMenu";
+            this.Text = "MainMenu";
             this.ResumeLayout(false);
             this.PerformLayout();
 

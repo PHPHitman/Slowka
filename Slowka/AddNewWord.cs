@@ -11,22 +11,18 @@ using System.Windows.Forms;
 
 namespace Slowka
 {
-    public partial class DodajSlowko : Form
+    public partial class AddNewWord : Form
     {
-        public DodajSlowko()
+        
+        public AddNewWord()
         {
             InitializeComponent();
         }
-        slowkaClass s = new slowkaClass();
+        EnglishWords s = new EnglishWords();
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            this.DialogResult = DialogResult.OK;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,7 +34,8 @@ namespace Slowka
 
             //Przesyłanie danych do bazy używając metod
             bool success = s.Insert(s);
-            if(success == true){
+            if (success == true)
+            {
                 //Powodzenie
                 MessageBox.Show("Dodano nowe słówko");
             }
@@ -46,12 +43,6 @@ namespace Slowka
             {
                 MessageBox.Show("Niepowodzenie. Spróbuj ponownie");
             }
-
-        }
-
-        private void btnWstecz_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
         }
     }
 }
