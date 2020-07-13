@@ -20,3 +20,5 @@ C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.pdb
 C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.AddNewWord.resources
 C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.Category.resources
 C:\Users\ACR\ProjektSlowka\Slowka\obj\Debug\Slowka.MainMenu.resources
+C:\Users\ACR\ProjektSlowka\Slowka\bin\Debug\Database.mdf
+C:\Users\ACR\ProjektSlowka\Slowka\bin\Debug\Database_log.ldf

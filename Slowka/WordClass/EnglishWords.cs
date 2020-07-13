@@ -4,10 +4,11 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slowka.SlowkaKlasy
+namespace Words.WordClass
 {
     class EnglishWords
     {
@@ -90,6 +91,88 @@ namespace Slowka.SlowkaKlasy
             return isSuccess;
         }
 
+        public bool Update(EnglishWords c)
+        {
+            bool isSuccess = false;
+            SqlConnection conn = new SqlConnection(myconnstring);
+            try
+            {
+                //Update database
+                string sql = "UPDATE Slowka SET Slowko=@Slowko, Tlumaczenie=@Tlumaczenie, Kategoria=@Kategoria WHERE SlowkoID=@slowkoID";
+
+                //SQL command
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                //Parameters
+                cmd.Parameters.AddWithValue("@Slowko", c.Slowko);
+                cmd.Parameters.AddWithValue("@Tlumaczenie", c.Tlumaczenie);
+                cmd.Parameters.AddWithValue("Kategoria", c.Kategoria);
+                cmd.Parameters.AddWithValue("SlowkoID", c.SlowkoID);
+
+                //Open database connection
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+                //if query is success
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+                else
+                {
+                    isSuccess = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+
+            }
+                return isSuccess;
+
+
+            }
+
+        //Delete method
+        public bool Delete(EnglishWords c)
+        {
+            //Default value 
+            bool isSuccess = false;
+            //Sql connection
+            SqlConnection conn = new SqlConnection(myconnstring);
+            try
+            {
+                //Delete data
+                string sql = "Delete FROM Slowka WHERE SlowkoID=@slowkoID";
+
+                //Sql command
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@SlowkoID", c.SlowkoID);
+                //Open connection
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+                else
+                {
+                    isSuccess = false;
+
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                //close connection
+                conn.Close();
+            }
+            return isSuccess;
+        }
+
+        }
+
 
     }
-}

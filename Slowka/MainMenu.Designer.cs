@@ -51,6 +51,7 @@
             this.progressBtn.TabIndex = 10;
             this.progressBtn.Text = "Postęp";
             this.progressBtn.UseVisualStyleBackColor = true;
+            this.progressBtn.Click += new System.EventHandler(this.progressBtn_Click);
             // 
             // addWordsBtn
             // 

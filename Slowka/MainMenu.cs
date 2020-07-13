@@ -17,6 +17,8 @@ namespace Slowka
             InitializeComponent();
         }
 
+
+
         private void LearnModeBtn_Click(object sender, EventArgs e)
         {
             Category Category = new Category();
@@ -45,6 +47,11 @@ namespace Slowka
             Hide();
             addWords.ShowDialog();
             Show();
+        }
+
+        private void progressBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
