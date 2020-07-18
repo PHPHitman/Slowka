@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Slowka;
+using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -18,10 +20,19 @@ namespace Words.WordClass
         public string Tlumaczenie { get; set; }
         public string Kategoria { get; set; }
 
+        public string Jezyk { get; set; }
+
+        public string Nauczone { get; set; }
+
+        public int Bledne { get; set; }
+
+        public int Poprawne { get; set; }
+
         static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
 
         
-        public DataTable Select()
+       
+        public DataTable Select(string lang)
         {
             //1 Połączenie z bazą
             SqlConnection conn = new SqlConnection(myconnstring);
@@ -29,8 +40,9 @@ namespace Words.WordClass
             try
             {
                 //SQL Query
-                string sql = "SELECT * FROM Slowka";
+                string sql = "SELECT * FROM Slowka WHERE Jezyk=@lang";
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@lang", lang);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 conn.Open();
                 adapter.Fill(dt);
@@ -47,6 +59,8 @@ namespace Words.WordClass
             return dt;
         }
 
+     
+
         public bool Insert (EnglishWords s)
         {
             bool isSuccess = false;
@@ -57,13 +71,15 @@ namespace Words.WordClass
             try
             {
                 //2 SQL Query przesłanie danych
-                string sql = "INSERT INTO Slowka (Slowko, Tlumaczenie, Kategoria) VALUES(@Slowko, @Tlumaczenie, @Kategoria)";
+                string sql = "INSERT INTO Slowka (Slowko, Tlumaczenie, Kategoria, Jezyk, Nauczone, Bledne, Poprawne) VALUES(@Slowko, @Tlumaczenie, @Kategoria, @Jezyk, 'Nie', 0, 0)";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //Tworzenie parametrów do przesłania danych
                 cmd.Parameters.AddWithValue("@Slowko", s.Slowko);
                 cmd.Parameters.AddWithValue("@Tlumaczenie", s.Tlumaczenie);
                 cmd.Parameters.AddWithValue("@Kategoria", s.Kategoria);
+                cmd.Parameters.AddWithValue("@Jezyk", s.Jezyk);
+             
 
                 //Connection Open
                 conn.Open();
@@ -172,7 +188,21 @@ namespace Words.WordClass
             return isSuccess;
         }
 
-        }
+
+      
+
+
+        
+
+
+
+
 
 
     }
+
+
+    }
+
+
+    

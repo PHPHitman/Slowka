@@ -50,6 +50,8 @@
             this.clearBtn = new System.Windows.Forms.Button();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.radioBtnEnglish = new System.Windows.Forms.RadioButton();
+            this.radioBtnGerman = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.modelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wordsEnglishBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,9 +60,9 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnBack.Location = new System.Drawing.Point(536, 361);
+            this.btnBack.Location = new System.Drawing.Point(91, 439);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(83, 40);
+            this.btnBack.Size = new System.Drawing.Size(102, 40);
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "Wstecz";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -70,7 +72,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(189, 36);
+            this.label4.Location = new System.Drawing.Point(12, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(284, 36);
             this.label4.TabIndex = 17;
@@ -79,11 +81,11 @@
             // addWordBtn
             // 
             this.addWordBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.addWordBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.addWordBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.addWordBtn.Location = new System.Drawing.Point(163, 361);
+            this.addWordBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.addWordBtn.ForeColor = System.Drawing.Color.Black;
+            this.addWordBtn.Location = new System.Drawing.Point(28, 325);
             this.addWordBtn.Name = "addWordBtn";
-            this.addWordBtn.Size = new System.Drawing.Size(85, 40);
+            this.addWordBtn.Size = new System.Drawing.Size(102, 40);
             this.addWordBtn.TabIndex = 14;
             this.addWordBtn.Text = "Dodaj";
             this.addWordBtn.UseVisualStyleBackColor = false;
@@ -112,7 +114,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 253);
+            this.label3.Location = new System.Drawing.Point(25, 238);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 34;
@@ -127,7 +129,7 @@
             "Praca",
             "Przedmioty",
             "Sport"});
-            this.comboBox1.Location = new System.Drawing.Point(120, 246);
+            this.comboBox1.Location = new System.Drawing.Point(119, 231);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(138, 21);
             this.comboBox1.TabIndex = 33;
@@ -135,7 +137,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 208);
+            this.label2.Location = new System.Drawing.Point(22, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 31;
@@ -143,7 +145,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(121, 202);
+            this.textBox2.Location = new System.Drawing.Point(120, 187);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(136, 20);
             this.textBox2.TabIndex = 30;
@@ -151,7 +153,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 165);
+            this.textBox1.Location = new System.Drawing.Point(120, 150);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(137, 20);
             this.textBox1.TabIndex = 29;
@@ -160,7 +162,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 168);
+            this.label5.Location = new System.Drawing.Point(22, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 28;
@@ -169,25 +171,25 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(305, 127);
+            this.dataGridView1.Location = new System.Drawing.Point(283, 153);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(459, 206);
+            this.dataGridView1.Size = new System.Drawing.Size(831, 336);
             this.dataGridView1.TabIndex = 35;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(373, 90);
+            this.searchBox.Location = new System.Drawing.Point(378, 119);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(391, 20);
+            this.searchBox.Size = new System.Drawing.Size(736, 20);
             this.searchBox.TabIndex = 36;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(290, 90);
+            this.label1.Location = new System.Drawing.Point(283, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 37;
@@ -197,9 +199,9 @@
             // updateBtn
             // 
             this.updateBtn.BackColor = System.Drawing.Color.DarkCyan;
-            this.updateBtn.Location = new System.Drawing.Point(258, 361);
+            this.updateBtn.Location = new System.Drawing.Point(157, 325);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(84, 40);
+            this.updateBtn.Size = new System.Drawing.Size(102, 40);
             this.updateBtn.TabIndex = 38;
             this.updateBtn.Text = "Aktualizuj";
             this.updateBtn.UseVisualStyleBackColor = false;
@@ -208,9 +210,9 @@
             // deleteBtn
             // 
             this.deleteBtn.BackColor = System.Drawing.Color.Crimson;
-            this.deleteBtn.Location = new System.Drawing.Point(348, 361);
+            this.deleteBtn.Location = new System.Drawing.Point(157, 383);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(91, 40);
+            this.deleteBtn.Size = new System.Drawing.Size(102, 40);
             this.deleteBtn.TabIndex = 39;
             this.deleteBtn.Text = "Usuń";
             this.deleteBtn.UseVisualStyleBackColor = false;
@@ -219,9 +221,9 @@
             // clearBtn
             // 
             this.clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.clearBtn.Location = new System.Drawing.Point(445, 361);
+            this.clearBtn.Location = new System.Drawing.Point(28, 383);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(85, 40);
+            this.clearBtn.Size = new System.Drawing.Size(102, 40);
             this.clearBtn.TabIndex = 40;
             this.clearBtn.Text = "Wyczyść";
             this.clearBtn.UseVisualStyleBackColor = false;
@@ -229,8 +231,9 @@
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(120, 127);
+            this.idTextBox.Location = new System.Drawing.Point(119, 112);
             this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(138, 20);
             this.idTextBox.TabIndex = 41;
             this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
@@ -238,18 +241,45 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 127);
+            this.label6.Location = new System.Drawing.Point(27, 119);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(18, 13);
             this.label6.TabIndex = 42;
             this.label6.Text = "ID";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // radioBtnEnglish
+            // 
+            this.radioBtnEnglish.AutoSize = true;
+            this.radioBtnEnglish.Checked = true;
+            this.radioBtnEnglish.Location = new System.Drawing.Point(378, 48);
+            this.radioBtnEnglish.Name = "radioBtnEnglish";
+            this.radioBtnEnglish.Size = new System.Drawing.Size(67, 17);
+            this.radioBtnEnglish.TabIndex = 43;
+            this.radioBtnEnglish.TabStop = true;
+            this.radioBtnEnglish.Text = "Angielski";
+            this.radioBtnEnglish.UseVisualStyleBackColor = true;
+            this.radioBtnEnglish.CheckedChanged += new System.EventHandler(this.radioBtnEnglish_CheckedChanged);
+            // 
+            // radioBtnGerman
+            // 
+            this.radioBtnGerman.AutoSize = true;
+            this.radioBtnGerman.Location = new System.Drawing.Point(564, 50);
+            this.radioBtnGerman.Name = "radioBtnGerman";
+            this.radioBtnGerman.Size = new System.Drawing.Size(71, 17);
+            this.radioBtnGerman.TabIndex = 44;
+            this.radioBtnGerman.TabStop = true;
+            this.radioBtnGerman.Text = "Niemiecki";
+            this.radioBtnGerman.UseVisualStyleBackColor = true;
+            this.radioBtnGerman.CheckedChanged += new System.EventHandler(this.radioBtnGerman_CheckedChanged);
+            // 
             // AddNewWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 506);
+            this.ClientSize = new System.Drawing.Size(1144, 506);
+            this.Controls.Add(this.radioBtnGerman);
+            this.Controls.Add(this.radioBtnEnglish);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(this.clearBtn);
@@ -301,5 +331,7 @@
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton radioBtnEnglish;
+        private System.Windows.Forms.RadioButton radioBtnGerman;
     }
 }

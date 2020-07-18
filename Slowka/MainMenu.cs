@@ -51,7 +51,19 @@ namespace Slowka
 
         private void progressBtn_Click(object sender, EventArgs e)
         {
+            Statistics stats = new Statistics();
 
+            stats.Width = this.Width;
+            stats.Height = this.Height;
+
+
+            stats.StartPosition = FormStartPosition.Manual;
+            stats.Location = new Point(this.Location.X, this.Location.Y);
+
+
+            Hide();
+            stats.ShowDialog();
+            Show();
         }
     }
 }

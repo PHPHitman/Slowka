@@ -16,6 +16,8 @@ namespace Slowka
 {
     public partial class AddNewWord : Form
     {
+
+        private string language="Angielski";
         
         public AddNewWord()
         {
@@ -34,8 +36,9 @@ namespace Slowka
 
         private void AddNewWord_Load(object sender, EventArgs e)
         {
+            
             //Load data in Data GridView using method
-            DataTable dt = s.Select();
+            DataTable dt = s.Select(language);
             dataGridView1.DataSource = dt;
 
         }
@@ -144,9 +147,12 @@ namespace Slowka
         {
             //Get value from text box
             string word = searchBox.Text;
+            
 
             SqlConnection conn = new SqlConnection(myconnstring);
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM slowka WHERE Slowko LIKE '%" + word + "%' OR Tlumaczenie LIKE '%" + word + "%'",conn);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM slowka WHERE Jezyk=@lang AND (Slowko LIKE '%" + word + "%' OR Tlumaczenie LIKE '% " +word + "%')",conn); 
+
+            sda.SelectCommand.Parameters.AddWithValue("@lang", language);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -179,7 +185,7 @@ namespace Slowka
                 MessageBox.Show("Wystąpił błąd, spróbuj ponownie");
             }
             //Load data in Data GridView using method
-            DataTable dt = s.Select();
+            DataTable dt = s.Select(language);
             dataGridView1.DataSource = dt;
             //Clear text fields after updated
             Clear();
@@ -187,10 +193,13 @@ namespace Slowka
 
         private void addWordBtn_Click(object sender, EventArgs e)
         {
+        
             //Get value from input fields
             s.Slowko = textBox1.Text;
             s.Tlumaczenie = textBox2.Text;
             s.Kategoria = comboBox1.Text;
+            s.Jezyk = language;
+       
 
             //Insert data to database
             bool success = s.Insert(s);
@@ -208,7 +217,7 @@ namespace Slowka
             }
 
             //Load data in Data GridView using method
-            DataTable dt = s.Select();
+            DataTable dt = s.Select(language);
             dataGridView1.DataSource = dt;
         }
 
@@ -222,7 +231,7 @@ namespace Slowka
                 MessageBox.Show("Słówko usunięte!");
 
                 //Refresh data grid view
-                DataTable dt = s.Select();
+                DataTable dt = s.Select(language);
                 dataGridView1.DataSource = dt;
                 //Clear text fields
                 Clear();
@@ -237,6 +246,27 @@ namespace Slowka
         {
             //Clear text fields
             Clear();
+        }
+
+        private void radioBtnEnglish_CheckedChanged(object sender, EventArgs e)
+        {
+            language = radioBtnEnglish.Text.ToString();
+            DataTable dt = s.Select(language);
+            dataGridView1.DataSource = dt;
+            Clear();
+        }
+
+        private void radioBtnGerman_CheckedChanged(object sender, EventArgs e)
+        {
+            language = radioBtnGerman.Text.ToString();
+            DataTable dt = s.Select(language);
+            dataGridView1.DataSource = dt;
+            Clear();
+        }
+
+        private void statLearned_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
