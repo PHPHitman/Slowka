@@ -17,7 +17,7 @@ namespace Slowka
     public partial class ShowWord : Form
     {
 
-        EnglishWords ew = new EnglishWords();
+        Words.WordClass.Words ew = new Words.WordClass.Words();
         static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
 
         //Array with all ID's

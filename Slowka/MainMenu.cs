@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Slowka.WordClass;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,7 @@ namespace Slowka
 
         private void addWordsBtn_Click(object sender, EventArgs e)
         {
-            AddNewWord addWords = new AddNewWord();
+            AddWords addWords = new AddWords();
 
             addWords.Width = this.Width;
             addWords.Height = this.Height;

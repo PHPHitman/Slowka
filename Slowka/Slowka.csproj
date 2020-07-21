@@ -62,12 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewWord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddNewWord.Designer.cs">
-      <DependentUpon>AddNewWord.cs</DependentUpon>
-    </Compile>
     <Compile Include="Category.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,16 +96,25 @@
     <Compile Include="Statistics.Designer.cs">
       <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
-    <Compile Include="WordClass\EnglishWords.cs" />
-    <Compile Include="WordClass\ShowRandomWord.cs">
+    <Compile Include="AddWords.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WordClass\ShowRandomWord.Designer.cs">
+    <Compile Include="AddWords.Designer.cs">
+      <DependentUpon>AddWords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditWord.Designer.cs">
+      <DependentUpon>EditWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Words.cs" />
+    <Compile Include="ShowRandomWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRandomWord.Designer.cs">
       <DependentUpon>ShowRandomWord.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddNewWord.resx">
-      <DependentUpon>AddNewWord.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +135,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddWords.resx">
+      <DependentUpon>AddWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWord.resx">
+      <DependentUpon>EditWord.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ModelDataSet.xsc">
       <DependentUpon>ModelDataSet.xsd</DependentUpon>
@@ -178,5 +187,6 @@
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
