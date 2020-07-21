@@ -119,7 +119,7 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Brak słówek!";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            
             // 
             // label5
             // 
@@ -131,7 +131,7 @@
             this.label5.Size = new System.Drawing.Size(400, 55);
             this.label5.TabIndex = 12;
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+           
             // 
             // ShowWord
             // 
