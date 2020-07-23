@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Words.WordClass;
+using Slowka;
 
 namespace Slowka.WordClass
 {
@@ -30,7 +30,7 @@ namespace Slowka.WordClass
         private string choosenCat;
         private string learned;
 
-        Words.WordClass.Words ew = new Words.WordClass.Words();
+       UserWords ew = new UserWords();
 
         /// <summary>
         /// Load words from database and insert to grid view
@@ -61,7 +61,7 @@ namespace Slowka.WordClass
         /// Update database with changed word
         /// </summary>
         /// <param name="ew">Word object with changed values</param>
-        public void saveChangedWord(Words.WordClass.Words ew)
+        public void saveChangedWord(UserWords ew)
         {
             SqlConnection connection = new SqlConnection(connstring);
 
@@ -163,7 +163,7 @@ namespace Slowka.WordClass
         /// Delete word from database
         /// </summary>
         /// <param name="ew">Selected word</param>
-        private void DeleteWord(Words.WordClass.Words ew)
+        private void DeleteWord(UserWords ew)
         {
             ew.SlowkoID = int.Parse(selectedWordID);
 

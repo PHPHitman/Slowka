@@ -84,6 +84,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserWords.cs" />
     <Compile Include="ShowWord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,7 +109,6 @@
     <Compile Include="EditWord.Designer.cs">
       <DependentUpon>EditWord.cs</DependentUpon>
     </Compile>
-    <Compile Include="Words.cs" />
     <Compile Include="ShowRandomWord.cs">
       <SubType>Form</SubType>
     </Compile>

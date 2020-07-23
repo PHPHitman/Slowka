@@ -22,7 +22,7 @@ namespace Slowka.WordClass
 
         private string typedWord;
 
-        Words.WordClass.Words ew = new Words.WordClass.Words();
+        UserWords ewx= new UserWords();
         /// <summary>
         /// Check if word exists
         /// </summary>
@@ -64,11 +64,15 @@ namespace Slowka.WordClass
         }
 
 
+       
+        
         /// <summary>
-        /// Save inserted word
+        /// Save word into database
         /// </summary>
-        /// <param name="ewx">Created word object with assigned values</param>
-        public void SaveWord(Words.WordClass.Words ewx)
+        /// <param name="ewx">Object with assigned values</param>
+        /// <param name="connstring">Connectionstring</param>
+        /// <returns></returns>
+        public bool SaveWord(UserWords ewx, string connstring)
         {
             SqlConnection connection = new SqlConnection(connstring);
 
@@ -89,10 +93,12 @@ namespace Slowka.WordClass
             if (count > 0)
             {
                 MessageBox.Show("Dodano słówko!");
+                return true;
             }
             else
             {
                 MessageBox.Show("Wystąpił błąd, spróbuj ponownie!");
+                return false;
             }
 
         }
@@ -111,6 +117,45 @@ namespace Slowka.WordClass
             choosenLang = "Angielski";
             choosenCat = "";
 
+        }
+
+        /// <summary>
+        /// Check if fields are empty
+        /// If empty show message under text field
+        /// </summary>
+        /// <param name="xword">Inserted word</param>
+        /// <param name="translate">Inserted translate</param>
+        /// <param name="choosenLang">Choosen language</param>
+        /// <param name="choosenCat">Choosen category</param>
+        /// <returns></returns>
+        public bool CheckAreFieldsEmpty(string xword, string translate, string choosenLang, string choosenCat)
+        {
+            
+            if (xword == "" || xword == null)
+            {
+                wordError.Text = "Wprowadź słówko!";
+                return  true;
+            }
+            else if (translate == "" || translate == null)
+            {
+                translateError.Text = "Wprowadź tłumaczenie!";
+                return  true;
+
+            }
+            else if (choosenLang == "")
+            {
+                languageError.Text = "Wybierz Język!";
+                return true;
+            }
+            else if (choosenCat == null)
+            {
+                categoryError.Text = "Wybierz kategorię!";
+                return  true;
+            }
+            else
+            {
+                return  false;
+            }
         }
         private void wordTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -154,31 +199,17 @@ namespace Slowka.WordClass
 
         private void addWordBtn_Click(object sender, EventArgs e)
         {
-            if (xword == "" || xword==null)
+            if (CheckAreFieldsEmpty(xword, translate, choosenLang, choosenCat)==false)
             {
-                wordError.Text = "Wprowadź słówko!";
-            }
-            else if (translate == "" || translate==null)
-            {
-                translateError.Text = "Wprowadź tłumaczenie!";
-            }
-            else if (choosenLang == "" )
-            {
-                languageError.Text = "Wybierz Język!";
-            }
-            else if (choosenCat == null)
-            {
-                categoryError.Text = "Wybierz kategorię!";
-            }
-            else
-            {
-                ew.Slowko = xword;
-                ew.Tlumaczenie = translate;
-                ew.Jezyk = choosenLang;
-                ew.Kategoria = choosenCat;
+                {
+                    ewx.Slowko = xword;
+                    ewx.Tlumaczenie = translate;
+                    ewx.Jezyk = choosenLang;
+                    ewx.Kategoria = choosenCat;
 
-                SaveWord(ew);
-                ClearTextFields();
+                    SaveWord(ewx, connstring);
+                    ClearTextFields();
+                }
             }
 
 

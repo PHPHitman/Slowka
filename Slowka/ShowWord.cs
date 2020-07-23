@@ -10,14 +10,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Words.WordClass;
 
 namespace Slowka
 {
     public partial class ShowWord : Form
     {
 
-        Words.WordClass.Words ew = new Words.WordClass.Words();
+        UserWords ew = new UserWords();
         static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
 
         //Array with all ID's
