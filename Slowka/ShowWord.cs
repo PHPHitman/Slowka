@@ -52,6 +52,9 @@ namespace Slowka
         }
 
 
+        /// <summary>
+        /// Load random word from database
+        /// </summary>
         public void LoadWord()
         {
             {
@@ -154,6 +157,10 @@ namespace Slowka
             }
         }
 
+
+        /// <summary>
+        /// Show word translate 
+        /// </summary>
         public void ShowTranslate()
         {
             SqlConnection conn = new SqlConnection(myconnstring);
@@ -186,6 +193,10 @@ namespace Slowka
             conn.Close();
         }
     
+
+        /// <summary>
+        /// Change word status to lerarned
+        /// </summary>
         public void ChangeStatus()
         {
           
@@ -212,6 +223,11 @@ namespace Slowka
 
             
         }
+
+
+        /// <summary>
+        /// Increment good answear counter
+        /// </summary>
         public void GoodAnswear()
         {
 
@@ -237,6 +253,10 @@ namespace Slowka
               
         }
 
+
+        /// <summary>
+        /// Increment bad answear comment
+        /// </summary>
         public void BadAnswear()
         {
 

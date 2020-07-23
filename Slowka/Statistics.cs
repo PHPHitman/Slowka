@@ -19,6 +19,10 @@ namespace Slowka
             InitializeComponent();
         }
 
+
+        /// <summary>
+        /// Load words statistics and display
+        /// </summary>
         public void LoadStats()
         {
             nauczone = 0;
